@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  margin: 0;
+  transition: background-color 0.5s ease;
+}
+.mode-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.mode-btn:hover {
+  background-color: #0089b3;
+}
