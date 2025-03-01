@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <script defer src="contact.js"></script>
+    
+</head>
+<body>
+    <div class="contact-container">
+        <h2 class="contact-title">Contact Us</h2>
+        <form id="contact-form">
+            <div class="contact-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="contact-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="contact-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="4" required></textarea>
+            </div>
+           
+           
+            <button type="submit" class="submit-btn" >Send Message</button>
+            
+        </form>
+    </div>
+    <div class="footer">IF U HAVE ANY QURRY CONTACT ON<b>  kPA123@gmail.com</b></div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("1leXmcdp6pqxP6PzK"); // Replace with your EmailJS Public Key
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            emailjs.send("service_uw6c4fb", "template_iu0u8ba", {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            }).then(function(response) {
+                document.getElementById("status").innerText = "Message sent successfully!";
+                document.getElementById("contact-form").reset();
+            }, function(error) {
+                document.getElementById("status").innerText = "Failed to send message.";
+            });
+        });
+    </script>
+</body>
+</html>

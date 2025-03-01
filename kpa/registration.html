@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Form</title>
+    <link rel="stylesheet" href="regis.css">
+    <script defer src="java.js"></script>
+   
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">KPA ADMISION FORM</h2>
+        <form id="admission-form">
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" placeholder="hamza" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="email" placeholder="123@gmail.com" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" placeholder="+9212345678" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address"  >ADDRESS</label>
+                <textarea id="address" placeholder="example;north" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="grade">GRADE APPLYING FOR</label>
+                <select id="grade" required>
+                    <option value="">Select</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="1">Grade 4   </option>
+                    <option value="2">Grade 5</option>
+                    <option value="3">Grade 6</option>
+
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
