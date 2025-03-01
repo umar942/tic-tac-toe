@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDS PARADISE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="main">
+                <h1>KID PARADISE ACADEMY</h1>
+            </div>
+            <ul>
+                <li><a href="#about">ABOUT US </a></li>
+              
+                <li><a href="registration.html">ADMISION NOW</a></li>
+                <li><a href="cotact.html">CONTACT US</a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <section class="hero">
+        <h1 id="hero0" > WELCOME TO KIDS PARADISE ACADEMY </h1>
+        <p id="p1" >A PLACE OF YOUNG MIND GROW AND LEARN...</p>
+        <a href="registration.html" class="btn">ADDMISION NOW</a>
+    </section>
+
+    <div class="info-container">
+        <h2 id="op1" >OUR SCHOOL IS THE BEST SCHOOL IN THE AREA</h2><br>
+        <h1>RULES AND REGULATIONS</h1>
+        <div id="rules"  >
+         
+            <ul id="bakri1" >
+                <h1>Attendance and Punctuality:</h1>
+                <li>Arrive on time to school and classes</li>
+                <li>Attend all scheduled classes regularly</li>
+                <h2>Dress Code:</h2>
+                <li>Adhere to specific guidelines regarding hairstyles and accessories</li>
+                <li>Wear the designated school uniform properly</li>
+                <h2>Classroom Conduct:</h2>
+                <li>Be respectful towards teachers and peers</li>
+                <li>Participate actively in class discussions. </li>
+                <h2>Electronic Devices:</h2>
+                <li>Use electronic devices only as permitted by teachers. </li>
+                <li>Turn off phones during class unless instructed otherwise. </li>
+            
+            </ul>
+            
+            
+            
+            
+            </div>
+    
+
+      
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Kids Paradise. All Rights Reserved.</p>
+        <p>"Contact us: info@kidsparadise.com | +123 456 7890"</p>
+        <p>Follow us on social media: [Facebook] [Instagram] [Twitter]</p>
+    </footer>
+
+    <script src="node.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            function revealSections() {
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 50) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+            window.addEventListener("scroll", revealSections);
+            revealSections();
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); // Change image every 3 seconds
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
